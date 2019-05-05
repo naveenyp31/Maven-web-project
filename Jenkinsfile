@@ -1,22 +1,14 @@
-#!groovy
-
 node {
-	   
-	stage('Checkout'){
-
-          checkout scm
-       }
-
-       stage('BuildArtifact'){
-
-         // sh 'mvn install'
-	       
-	       sh 'mvn clean'
-       }
-	   
-      stage('Sonar') {
-                    //add stage sonar
-                   // sh 'mvn sonar:sonar'
-                }
-       
+    stage("Code checkout")
+    {
+     git credentialsId: '2dd0ef6a-ec89-415a-ba25-edb3a6bd5d4e', url: 'https://github.com/DevOps-Traning/Maven-web-project.git'   
+    }
+    stage('Maven')
+    {
+        bat "mvn clean package"
+    }
+        stage('Sonar')
+    {
+        bat "mvn sonar:sonar"
+    }
 }
