@@ -7,8 +7,4 @@ node {
     {
         bat "mvn clean package"
     }
-        stage('Sonar')
-    {
-        bat "mvn sonar:sonar"
-    }
 }
