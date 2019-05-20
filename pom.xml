@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.nandihal</groupId>
-  <artifactId>Maven-Project</artifactId>
+  <artifactId>Maven-web-Project</artifactId>
   <packaging>war</packaging>
   <version>2.3-release</version>
   <name>Maven Web Project</name>
