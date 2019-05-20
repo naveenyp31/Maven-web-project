@@ -5,6 +5,6 @@ node {
     }
     stage('Maven')
     {
-        bat "mvn clean package"
+        bat "mvn clean deploy"
     }
 }
