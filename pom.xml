@@ -104,13 +104,13 @@
 <repository>
 <id>nexus</id>
 <name>releaserepo</name>
-<url>http://localhost:8088/June-batch/repository/maven-web-project-release/</url>
+<url>http://localhost:8088/Aug-batch/repository/maven-web-project-release/</url>
 </repository>
 
 <snapshotRepository>
 <id>nexus</id>
 <name>snapshotrepo</name>
-<url>http://localhost:8088/June-batch/repository/maven-web-project-snapshot/</url>
+<url>http://localhost:8088/Aug-batch/repository/maven-web-project-snapshot/</url>
 </snapshotRepository>
  
 </distributionManagement>
