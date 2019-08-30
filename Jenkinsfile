@@ -1,14 +1,21 @@
 node {
-    stage('code checkout')
+    stage("git checkout")
     {
-        git credentialsId: 'a6e80d27-3557-4c7d-b8de-0108b302726a', url: 'https://github.com/DevOps-Traning/Maven-web-project.git'
+        git credentialsId: '7af3f3d0-5f15-42ec-addf-1213081fd23a', url: 'https://github.com/DevOps-Traning/Maven-web-project.git'
     }
-	stage('Maven')
+	stage("Maven")
 	{
-	bat 'mvn clean deploy'
+	 if (isUnix())
+	 {
+	 "sh mvn clean package"
+	 }
+	 else 
+	 {
+	 "bat mvn clean package"
+	 }
 	}
-	stage('Nexus')
+	stage("Artifactory-repo")
 	{
-	bat 'mvn sonar:sonar'
+	"bat mvn deploy"
 	}
 }
