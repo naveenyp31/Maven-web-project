@@ -1,22 +1,34 @@
-node {
-    stage("code checkout")
+node{
+    stage('code checkout')
     {
-       git credentialsId: '7af3f3d0-5f15-42ec-addf-1213081fd23a', url: 'https://github.com/DevOps-Traning/Maven-web-project.git' 
+        git credentialsId: 'b3a120d4-9d56-4c69-b7b2-393491f49786', url: 'https://github.com/DevOps-Traning/Maven-web-project.git'
     }
-    stage("maven")
+    stage('maven')
     {
-        def mvnHOME = tool name: 'Windows-Maven', type: 'maven'
-        if (isUnix())
-        {
-        sh "${mvnHOME}/bin/mvn clean deploy"
-        }
-        else 
-        {
-        bat "${mvnHOME}/bin/mvn clean deploy"
-        }
+     def mvnHOME = tool name: 'windows-maven', type: 'maven'
+     if (isUnix())
+     {
+         sh "${mvnHOME}/bin/mvn clean package"
+     }
+     else 
+     {
+       bat "${mvnHOME}/bin/mvn clean package"  
+     }
     }
-    stage("tomcat")
+    stage('sonar')
     {
-        bat label: '', script: 'copy C:\\Users\\Nandihal\'s\\.jenkins\\workspace\\CICD\\target\\*.war C:\\devops\\apache-tomcat-9.0.12\\webapps'
+     def mvnHOME = tool name: 'windows-maven', type: 'maven'
+     if (isUnix())
+     {
+         sh "${mvnHOME}/bin/mvn sonar:sonar"
+     }
+     else 
+     {
+       bat "${mvnHOME}/bin/mvn sonar:sonar"  
+     }
+    }
+    stage('tomcat')
+    {
+        bat label: '', script: 'copy C:\\Users\\Nandihal\'s\\.jenkins\\workspace\\CICD-Pipeline\\target\\*.war C:\\devops\\apache-tomcat-9.0.12\\webapps\\'
     }
 }
