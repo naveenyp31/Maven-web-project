@@ -104,13 +104,13 @@
 <repository>
 <id>nexus</id>
 <name>releaserepo</name>
-<url>http://localhost:8081/repository/maven-oct-java-release-repo/</url>
+<url>http://localhost:8081/repository/maven-devops-release-jan2020/</url>
 </repository>
 
 <snapshotRepository>
 <id>nexus</id>
 <name>snapshotrepo</name>
-<url>http://localhost:8081/repository/maven-cot-java-snapshot-repo/</url>
+<url>http://localhost:8081/repository/maven-devops-snapshot-jan2020/</url>
 </snapshotRepository>
  
 </distributionManagement>
