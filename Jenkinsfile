@@ -5,7 +5,7 @@ node{
     }
     stage('maven')
     {
-     def mvnHOME = tool name: 'windows-maven', type: 'maven'
+     def mvnHOME=tool name: 'Windows-Maven', type: 'maven'
      if (isUnix())
      {
          sh "${mvnHOME}/bin/mvn clean package"
@@ -17,7 +17,7 @@ node{
     }
     stage('sonar')
     {
-     def mvnHOME = tool name: 'windows-maven', type: 'maven'
+     def mvnHOME=tool name: 'Windows-Maven', type: 'maven'
      if (isUnix())
      {
          sh "${mvnHOME}/bin/mvn sonar:sonar"
