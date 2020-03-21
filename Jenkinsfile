@@ -29,6 +29,6 @@ node{
     }
     stage('tomcat')
     {
-        bat label: '', script: 'copy C:\\Users\\Nandihal\'s\\.jenkins\\workspace\\CICD-Pipeline\\target\\*.war C:\\devops\\apache-tomcat-9.0.12\\webapps\\'
+        bat label: '', script: 'copy C:\\Users\\Nandihal\'s\\.jenkins\\workspace\\myfirstpipelinejob\\target\\*.war D:\\DevOpsTools\\apache-tomcat-9.0.12\\webapps\\'
     }
 }
