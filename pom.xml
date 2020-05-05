@@ -104,13 +104,13 @@
 <repository>
 <id>nexus</id>
 <name>releaserepo</name>
-<url>http://localhost:8081/repository/maven-feb-release2020/</url>
+<url>http://localhost:8081/april2020/repository/maven-april2020-Release/</url>
 </repository>
 
 <snapshotRepository>
 <id>nexus</id>
 <name>snapshotrepo</name>
-<url>http://localhost:8081/repository/maven-feb-snapshot2020/</url>
+<url>http://localhost:8081/april2020/repository/maven-april2020-Snapshot/</url>
 </snapshotRepository>
  
 </distributionManagement>
