@@ -6,7 +6,7 @@
   <groupId>com.nandihal</groupId>
   <artifactId>Maven-web-Project</artifactId>
   <packaging>war</packaging>
-  <version>3.2-Release</version>
+  <version>3.4-Release</version>
   <name>Maven Web Project</name>
   <description>Maven Web Project for Java Project</description>
 
