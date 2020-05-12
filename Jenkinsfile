@@ -7,10 +7,7 @@ node
     stage("Maven")
     {
         def mvnHOME = tool name: 'Windows-Maven', type: 'maven'
-        bat "${mvnHOME}/bin/mvn clean deploy"
+        bat "${mvnHOME}/bin/mvn clean package"
     }
-    stage("deployment")
-    {
-     bat label: '', script: 'copy C:\\Users\\Nandihal\'s\\.jenkins\\workspace\\myfirstpipelinejob\\target\\*.war D:\\DevOpsTools\\apache-tomcat-9.0.12\\webapps'   
-    }
+    
 }
