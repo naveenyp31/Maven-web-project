@@ -104,13 +104,13 @@
 <repository>
 <id>nexus</id>
 <name>releaserepo</name>
-<url>http://13.233.85.70:8081/repository/maven-mar-release/</url>
+<url>http://13.233.184.43:8081/repository/maven-mar-release/</url>
 </repository>
 
 <snapshotRepository>
 <id>nexus</id>
 <name>snapshotrepo</name>
-<url>http://13.233.85.70:8081/repository/maven-mar-snapshop/</url>
+<url>http://13.233.184.43:8081/repository/maven-mar-snapshop/</url>
 </snapshotRepository>
  
 </distributionManagement>
