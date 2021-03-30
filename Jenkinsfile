@@ -6,7 +6,7 @@ git credentialsId: 'a22088e2-6170-4c11-bb28-fb920416a485', url: 'https://github.
 stage("maven")
 {
 def mvnHOME = tool name: 'linuxmaven', type: 'maven' 
-sh "${mvnHOME}/bin/mvn clean deploy"
+sh "${mvnHOME}/bin/mvn clean package"
 }
 stage("tomcat")
 {
